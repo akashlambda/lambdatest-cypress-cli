@@ -20,7 +20,7 @@ module.exports = {
   CYPRESS_ENV_FILE_PATH: "cypress.env.json",
   LT_USERNAME_ENV: "LT_USERNAME",
   LT_ACCESS_KEY_ENV: "LT_ACCESS_KEY",
-  ENVS: ["stage", "beta", "prod", "preprod", "stage_new"],
+  ENVS: ["stage", "beta", "beta_akash", "prod", "preprod", "stage_new"],
   prod: {
     INTEGRATION_BASE_URL: "https://api.lambdatest.com/liis",
     BUILD_BASE_URL: "https://api.lambdatest.com/automation/api/v1/builds/",
@@ -31,6 +31,18 @@ module.exports = {
       "https://api.lambdatest.com/automation/api/v1/cypress/artefacts/test/",
   },
   beta: {
+    INTEGRATION_BASE_URL: "https://api-akash4-dev.lambdatestinternal.com/liis",
+    BUILD_BASE_URL:
+      "https://api-akash4-dev.lambdatestinternal.com/automation/api/v1/builds/",
+    BUILD_STOP_URL:
+      "https://api-akash4-dev.lambdatestinternal.com/api/v1/test/stop",
+    SESSION_URL:
+      "https://api-akash4-dev.lambdatestinternal.com/automation/api/v1/sessions?limit=200&session_id=",
+    REPORT_URL:
+      "https://api-akash4-dev.lambdatestinternal.com/automation/api/v1/cypress/artefacts/test/",
+  },
+
+  beta_akash: {
     INTEGRATION_BASE_URL: "https://api-akash4-dev.lambdatestinternal.com/liis",
     BUILD_BASE_URL:
       "https://api-akash4-dev.lambdatestinternal.com/automation/api/v1/builds/",
